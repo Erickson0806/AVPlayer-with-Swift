@@ -27,7 +27,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="remote"/>
                                 <connections>
-                                    <segue destination="WBv-Zr-pYO" kind="modal" id="Yr2-d5-BSK"/>
+                                    <segue destination="WBv-Zr-pYO" kind="presentation" id="E2e-3V-FgY"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ox-tO-MFQ">
@@ -46,9 +46,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="local"/>
-                                <connections>
-                                    <segue destination="WBv-Zr-pYO" kind="modal" id="gme-vs-LeN"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -62,6 +59,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8Ox-tO-MFQ" secondAttribute="bottom" id="ntb-lR-Qmp"/>
                         </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,17 +76,52 @@
                     <view key="view" contentMode="scaleToFill" id="z0H-cQ-yWX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mY0-MJ-qdc" customClass="PlayerView" customModule="AVPlayerSwift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mY0-MJ-qdc" firstAttribute="leading" secondItem="z0H-cQ-yWX" secondAttribute="leading" id="2VV-PA-s6L"/>
+                            <constraint firstAttribute="trailing" secondItem="mY0-MJ-qdc" secondAttribute="trailing" id="AdK-WH-ol1"/>
+                            <constraint firstItem="97J-4z-eAs" firstAttribute="top" secondItem="mY0-MJ-qdc" secondAttribute="bottom" id="aot-cR-aqF"/>
+                            <constraint firstItem="mY0-MJ-qdc" firstAttribute="top" secondItem="E0r-HZ-eIX" secondAttribute="bottom" id="gut-8t-rjZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="mY0-MJ-qdc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2VV-PA-s6L"/>
+                                <exclude reference="AdK-WH-ol1"/>
+                                <exclude reference="gut-8t-rjZ"/>
+                                <exclude reference="aot-cR-aqF"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="mY0-MJ-qdc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2VV-PA-s6L"/>
+                                <include reference="AdK-WH-ol1"/>
+                                <include reference="gut-8t-rjZ"/>
+                                <include reference="aot-cR-aqF"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="e6F-LV-qS4"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="playerView" destination="mY0-MJ-qdc" id="5X2-cy-KVE"/>
+                        <outlet property="videoPlayerView" destination="mY0-MJ-qdc" id="ie1-ei-aFz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HvG-6C-I17" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1167" y="339"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="gme-vs-LeN"/>
-    </inferredMetricsTieBreakers>
 </document>

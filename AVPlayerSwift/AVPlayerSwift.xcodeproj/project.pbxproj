@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1E2F121C535ACF00794E20 /* Transport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1E2F111C535ACF00794E20 /* Transport.swift */; };
 		9B7EC0C71C51C4A60090E899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7EC0C61C51C4A60090E899 /* AppDelegate.swift */; };
 		9B7EC0C91C51C4A60090E899 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7EC0C81C51C4A60090E899 /* ViewController.swift */; };
 		9B7EC0CC1C51C4A60090E899 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7EC0CA1C51C4A60090E899 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B1E2F111C535ACF00794E20 /* Transport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transport.swift; sourceTree = "<group>"; };
 		9B7EC0C31C51C4A60090E899 /* AVPlayerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B7EC0C61C51C4A60090E899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B7EC0C81C51C4A60090E899 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				9B7EC0DA1C51CAD90090E899 /* PlayerManager.swift */,
 				9B7EC0DC1C51D5CC0090E899 /* PlayerView.swift */,
 				9B7EC0DE1C51E0850090E899 /* OverlayView.swift */,
+				9B1E2F111C535ACF00794E20 /* Transport.swift */,
 				9B7EC0CA1C51C4A60090E899 /* Main.storyboard */,
 				9B7EC0CD1C51C4A60090E899 /* Assets.xcassets */,
 				9B7EC0CF1C51C4A60090E899 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B7EC0C91C51C4A60090E899 /* ViewController.swift in Sources */,
+				9B1E2F121C535ACF00794E20 /* Transport.swift in Sources */,
 				9B7EC0C71C51C4A60090E899 /* AppDelegate.swift in Sources */,
 				9B7EC0DB1C51CAD90090E899 /* PlayerManager.swift in Sources */,
 				9B7EC0DF1C51E0850090E899 /* OverlayView.swift in Sources */,
@@ -300,6 +304,7 @@
 				9B7EC0D71C51C4A60090E899 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

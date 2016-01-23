@@ -20,14 +20,15 @@ class PlayerManager: NSObject {
     var playerItem:AVPlayerItem?
     var player:AVPlayer?
     
-//    let view:UIView?
+    var transport:DKTransport?
     
-    
-    
+
     init(url:NSURL) {
-        super.init()
         
+        super.init()
+
         asset = AVAsset(URL: url)
+        
         
         self.perpareToPlay()
     }
@@ -40,16 +41,15 @@ class PlayerManager: NSObject {
             "availableMediaCharacteristicsWithMediaSelectionOptions"
         ]
         self.playerItem = AVPlayerItem(asset: asset!, automaticallyLoadedAssetKeys: keys)
-        self.playerItem?.addObserver(self, forKeyPath: kStatusKeyPath, options: .New, context: nil)
+        self.playerItem!.addObserver(self, forKeyPath: kStatusKeyPath, options: .New, context: nil)
         
         self.player = AVPlayer(playerItem: self.playerItem!)
-        
-        
-        
     }
     
     
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+        
+        
         dispatch_async(dispatch_get_main_queue()) {
             self.playerItem!.removeObserver(self, forKeyPath: kStatusKeyPath)
             
@@ -57,7 +57,11 @@ class PlayerManager: NSObject {
                 self.addPlayerItemTimeObserver()
                 self.addItemEndObserverForPlayerItem()
                 
-                let duration = self.playerItem!.duration
+//                let duration = self.playerItem!.duration
+//
+                self.player?.play()
+                
+                
                 
             }
             
